@@ -8,16 +8,16 @@ Tutorials
         :align: left
 
         If you would like to learn deep learning algorithms, please refer to
-        "dive into deep learning" book. It explain every algorithm from the
-        beggining, and implements them from scratch with MXNet.
+        the "Dive into Deep Learning" book. It explains every algorithm from the
+        beginning, and implements them with MXNet from scratch.
 
-In this unit, we will go thourgh how to use MXNet to implement various deep
+In this unit, we will go through how to use MXNet to implement various deep
 learning algorithms.
 
 Getting Started
 ---------------
 
-We recommend you to start with :doc:`crash-course/index`. Gluon is the
+We recommend you start with :doc:`crash-course/index`. Gluon is the
 imperative frontend of MXNet. Once you've completed the course, you should be
 able to understand how to use the major components of Gluon, and define and
 train a basic neural network to classify images.
