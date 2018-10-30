@@ -70,9 +70,9 @@ extensions = [
     'sphinx.ext.napoleon',
     # 'sphinx.ext.mathjax',
     # 'sphinx.ext.viewcode',
-    'breathe',
+    'breathe'
 #    'mxdoc'
-    'sphinxcontrib.disqus'
+#    'sphinxcontrib.disqus'
 ]
 
 disqus_shortname = 'mxnet'

@@ -21,38 +21,16 @@ blocks for a neural network model:
 
 The difference between these three classes:
 
-- :py:class:`Block`: the bass class for any neural network layers and models.
+- :py:class:`Block`: the base class for any neural network layers and models.
+  `A look under the hood of gluon`_ and
+  `Gluon - Neural network building blocks`_ are tutorials that provide details
+  on how to use this class of container.
 - :py:class:`HybridBlock`: a subclass of :py:class:`Block` that allows to
   hybridize a model. It constraints operations can be run in the ``forward``
-  method, e.g. the `print` function doesn't work any more. Check tutorial XXX
-  for more details.
-
+  method, e.g. the `print` function doesn't work any more.
 - :py:class:`SymbolBlock`: a subclass of :py:class:`Block` that is able to wrap
   a :py:class:`mxnet.symbol.Symbol` instance into a :py:class:`Block`
-  instance. Check XXX-Symbol tutorials and how to XXX to use this class.
-
-
-Block Example
--------------
-
-The following example implements a simple multilayer perceptron network with
-:py:class:`mxnet.gluon.nn.Block`.
-
-.. code-block:: python
-   :emphasize-lines: 1
-
-   class MLP(Block):
-       def __init__(self, **kwargs):
-           super(MLP, self).__init__(**kwargs)
-           with self.name_scope():
-               self.dense0 = nn.Dense(128)
-               self.dense1 = nn.Dense(64)
-               self.dense2 = nn.Dense(10)
-
-       def forward(self, x):
-           x = nd.relu(self.dense0(x))
-           x = nd.relu(self.dense1(x))
-           return self.dense2(x)
+  instance.
 
 
 Sequential containers
@@ -73,22 +51,6 @@ stacking layers sequentially. Refer to the tutorials list in the
     HybridSequential
 
 
-Sequential Example
-------------------
-
-The following example implements a simple multilayer perceptron network with
-:py:class:`mxnet.gluon.nn.Sequential`.
-
-.. code-block:: python
-   :emphasize-lines: 1
-
-    net1 = gluon.nn.Sequential()
-    with net1.name_scope():
-        net1.add(gluon.nn.Dense(128, activation="relu"))
-        net1.add(gluon.nn.Dense(64, activation="relu"))
-        net1.add(gluon.nn.Dense(10))
-
-
 Concurrent containers
 ---------------------
 
@@ -105,6 +67,7 @@ ResNet and Inception block in GoogLeNet.
 
     Concurrent
     HybridConcurrent
+
 
 Further Reading
 ---------------
