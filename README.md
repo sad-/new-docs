@@ -36,3 +36,17 @@ To build with testing the notebooks (requires GPU):
 ```bash
 make
 ```
+
+## Troubleshooting
+
+You might need to init and update your submodules.
+
+```bash
+git submodule update --init --recursive
+```
+
+You might need to update the environment for the latest modules.
+
+```bash
+conda env update -f environment.yml
+```
