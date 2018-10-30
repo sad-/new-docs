@@ -32,6 +32,29 @@ The difference between these three classes:
   instance. Check XXX-Symbol tutorials and how to XXX to use this class.
 
 
+Block Example
+-------------
+
+The following example implements a simple multilayer perceptron network with
+:py:class:`mxnet.gluon.nn.Block`.
+
+.. code-block:: python
+   :emphasize-lines: 1
+
+   class MLP(Block):
+       def __init__(self, **kwargs):
+           super(MLP, self).__init__(**kwargs)
+           with self.name_scope():
+               self.dense0 = nn.Dense(128)
+               self.dense1 = nn.Dense(64)
+               self.dense2 = nn.Dense(10)
+
+       def forward(self, x):
+           x = nd.relu(self.dense0(x))
+           x = nd.relu(self.dense1(x))
+           return self.dense2(x)
+
+
 Sequential containers
 ---------------------
 
