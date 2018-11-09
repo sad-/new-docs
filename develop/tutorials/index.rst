@@ -8,17 +8,17 @@ Tutorials
         :align: left
 
         To learn deep learning from scratch, you can refer to the
-        **interactive** dive into deep learning book.
+        **interactive** [Dive Into Deep Learning](http://diveintodeeplearning.org.s3-website-us-west-2.amazonaws.com/) book.
 
-In this unit, we will go thourgh how to use MXNet to implement various deep
-learning algorithms.
 
-A 60-minute crash course
+A 60-Minute Crash Course
 ------------------------
 
-This crash course will give you a quick overview of the core concept of NDArray
-and Gluon, which is are imperative frontend to manipulate multiple dimensional
-arrays and train neural networks, respectively:
+This crash course will give you a quick overview of the core concepts of NDArray
+and Gluon. NDArray is for manipulating multi-dimensional arrays.
+Gluon is an imperative frontend to train neural networks.
+This is a good place to start if you are already familiar with machine Learning
+or other deep learning frameworks.
 
 .. toctree::
    :maxdepth: 1
@@ -31,7 +31,7 @@ arrays and train neural networks, respectively:
    crash-course/use_gpus
 
 You can also watch the video tutorials for this crash course. Note that two APIs
-descributed in vidoes have changes:
+described in videos have changes:
 
 - ``with name_scope`` is not necessary any more.
 - use ``save_parameters/load_parameters`` instead of ``save_params/load_params``
@@ -55,6 +55,7 @@ a hand-written digit classifier using the `MNIST <https://en.wikipedia.org/wiki/
    :maxdepth: 1
 
    mnist
+
 
 Text
 -----
