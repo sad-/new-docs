@@ -220,11 +220,11 @@ for e in xrange(epochs):
         trainer.step(batch_size=128)
         total_loss += loss.mean().asscalar()
         accuracy += acc(output, label)
-    print 'Epoch %d/%d' % (e+1, epochs)
-    print '%ds %dus/sample - loss: %.4f - acc: %.4f'%((time.time()-tic),
+    print('Epoch %d/%d' % (e+1, epochs))
+    print('%ds %dus/sample - loss: %.4f - acc: %.4f'%((time.time()-tic),
                                                       (time.time()-tic)*10**6//data_size,
                                                       total_loss/i,
-                                                      accuracy/i)
+                                                      accuracy/i))
     
 ```
 
